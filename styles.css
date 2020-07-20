@@ -1,11 +1,11 @@
 html {
     background: #f7f7f7;
+    font-size: 16px;
 }
 
 body {
     font-family: 'Barlow', sans-serif;
     background: white;
-    max-width: 1000px;
     margin: 0 auto;
     color: rgb(49, 46, 46);
 }
@@ -14,6 +14,10 @@ header, footer {
     background: #333840;
     color: white;
     padding: 20px 10px;
+}
+
+input[type="search"] {
+    width: 100%;
 }
 
 ul {
@@ -31,7 +35,7 @@ a {
     color: inherit;
 }
 
-a:hover{
+a:hover {
     color: #0e69e9;
 }
 
@@ -43,31 +47,21 @@ header h1, nav {
     display: inline-block;
 }
 
-header h1{
-    width: 65%;
+header h1 {
+
+    width: 100%;
 }
 
-main {
-    width: 680px;
-    display: inline-block;
-    padding: 10px;
-}
-
-aside {
-    width: 270px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px;
-}
 
 .products {
     box-sizing: border-box;
     border: 1px solid grey;
-    width: 210px;
+    /*width: 30%;*/
+    width: 100%;
     margin: 5px;
     padding: 5px;
-    display: inline-block;
     text-align: center;
+    font-size: 1em;
 }
 
 img {
@@ -79,61 +73,123 @@ img {
     display: inline-block;
 }
 
-.button:last-of-type{
+.button:last-of-type {
     background: #0e69e9;
     color: white;
 }
 
 /*pd page*/
 
-.product-detail{
+.product-detail {
     width: 660px;
 }
 
-.product-detail img{
+.product-detail img {
     max-width: 50%;
     float: left;
 }
 
 /*cu page*/
-form{
+form {
     padding: 10px;
     margin: 10px 0;
     width: 600px;
 }
 
-form > div{
+form > div {
     margin: 10px 0;
 }
 
-.inline label{
+.inline label {
     display: inline-block;
     width: 100px;
 }
 
-input[type="text"], input[type="email"], textarea{
+input[type="text"], input[type="email"], textarea {
     padding: 10px;
     width: 400px;
 }
 
 /*table*/
-table{
+table {
     width: 400px;
     text-align: left;
     margin: 20px;
 }
 
-caption{
+caption {
     font-weight: bold;
     font-style: italic;
     border-bottom: 1px dotted;
     padding: 10px;
 }
 
-th,td{
+th, td {
     padding: 10px;
 }
 
-tr:hover{
+tr:hover {
     background: #f5f5f5;
 }
+
+@media (min-width: 800px) {
+    input[type="search"] {
+        width: 40%;
+        margin-left: 2em;
+    }
+
+    .products {
+        display: inline-block;
+        width: 48%;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    body{
+        text-align: left;
+    }
+
+    header h1{
+        width: 55%;
+    }
+
+    main {
+        width: 68%;
+        display: inline-block;
+        padding: 10px;
+    }
+
+    aside {
+        width: 27%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body{
+        max-width: 80vw;
+    }
+
+    .products{
+        width: 30%;
+    }
+
+    input[type="search"] {
+        width: 20%;
+    }
+}
+
+/*@media (min-width: 600px) {
+    li{
+        color: red;
+    }
+}
+
+@media print {
+    body{
+        color: green;
+    }
+}*/
